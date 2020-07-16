@@ -1,0 +1,29 @@
+{{ form_start(form) }}
+    {# {{ form_widget(form) }} #}
+    <div class="input-field col s12 l12">
+    {{ form_row (form.title, {'attr' : {
+        'placeholder' : "Titre",
+    
+    }})}}
+</div>
+
+<div class="input-field col s12 l12">
+    {{ form_row (form.content, {'attr' : {
+        'placeholder' : "contenu",
+        
+    }})}}
+</div>
+<div class="input-field col s12 l6">
+    {{ form_row (form.goal, {'attr' : {
+        'placeholder' : "Montant"
+    }})}}
+</div>
+
+<div class="input-field col s12 l6">
+    {{ form_row (form.name, {'attr' : {
+        'placeholder' : "Nom"
+    }})}}
+</div>
+
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
